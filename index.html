@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premium HDPE Pipes & Coils | Mangalam Pipes</title>
-    <meta name="description" content="Premium HDPE Pipes & Coils for Modern Infrastructure with leak-proof fusion joints and chemical resistance.">
+    <meta name="description"
+        content="Premium HDPE Pipes & Coils for Modern Infrastructure with leak-proof fusion joints and chemical resistance.">
     <link rel="stylesheet" href="styles.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Urbanist:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
     <!-- Header Section -->
     <header class="site-header" id="site-header">
         <div class="container header-container">
             <div class="logo">
-                <!-- Placeholder for Logo -->
-                <span style="font-weight: 800; font-size: 1.5rem; color: var(--navy-dark);"><span style="color: var(--accent-red);">MANGALAM</span> PIPES</span>
+                <img src="assets/icons/gushwork assignment - logo.png" alt="Mangalam Pipes Logo"
+                    style="height: 45px; width:109px;">
             </div>
-            
+
             <nav class="main-nav">
                 <ul class="nav-list">
                     <li><a href="#about" class="nav-link">About Us</a></li>
                     <li>
-                        <a href="#products" class="nav-link">Products <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+                        <a href="#products" class="nav-link">Products <img src="assets/icons/CaretRight.png" alt="down"
+                                class="nav-arrow"
+                                style="transform: rotate(90deg); height: 10px; margin-left: 4px; display: inline-block;"></a>
                     </li>
                 </ul>
             </nav>
@@ -35,7 +42,7 @@
             <div class="header-actions">
                 <a href="#contact" class="btn btn-primary">Contact Us</a>
             </div>
-            
+
             <!-- Mobile Menu Toggle -->
             <button class="mobile-menu-toggle" aria-label="Toggle menu">
                 <i class="fa-solid fa-bars"></i>
@@ -45,50 +52,64 @@
 
     <!-- Main Content -->
     <main>
-        
+
         <!-- Breadcrumbs -->
         <div class="container breadcrumb-container">
             <nav class="breadcrumbs">
-                <a href="#">Products</a> <span class="separator"><i class="fa-solid fa-chevron-right"></i></span> <span class="current">Two For One Twister</span>
+                <a href="#">Products</a> <span class="separator"><i class="fa-solid fa-chevron-right"></i></span> <span
+                    class="current">Two For One Twister</span>
             </nav>
         </div>
 
         <!-- Hero Section -->
         <section class="hero-section">
             <div class="container hero-container">
-                
+
                 <!-- Carousel Column -->
                 <div class="hero-carousel">
                     <div class="main-image-container">
-                        <button class="carousel-nav prev-btn"><i class="fa-solid fa-arrow-left"></i></button>
+                        <button class="carousel-nav prev-btn"><img src="assets/icons/Arrow left.png" alt="Prev"
+                                style="height: 24px; width:24px"></button>
                         <div class="image-zoom-wrapper" id="image-zoom-wrapper">
-                            <img src="assets/carousel_1_1778756992930.png" alt="HDPE Pipes Manufacturing" id="main-product-image" class="main-product-image">
+                            <img src="assets/91928c6beda9d501d1c26ae0cac9daf21cf34169.jpg"
+                                alt="HDPE Pipes Manufacturing" id="main-product-image" class="main-product-image">
                             <!-- Zoom preview element will be injected by JS -->
                         </div>
-                        <button class="carousel-nav next-btn"><i class="fa-solid fa-arrow-right"></i></button>
+                        <button class="carousel-nav next-btn"><img src="assets/icons/Arrow right.png" alt="Next"
+                                style="height: 24px; width:24px"></button>
                     </div>
-                    
+
                     <div class="thumbnail-container">
-                        <img src="assets/carousel_1_1778756992930.png" alt="Thumbnail 1" class="thumbnail active" data-index="0">
-                        <img src="assets/carousel_2_1778757012244.png" alt="Thumbnail 2" class="thumbnail" data-index="1">
-                        <img src="assets/carousel_3_1778757034986.png" alt="Thumbnail 3" class="thumbnail" data-index="2">
+                        <img src="assets/carousel_1_1778756992930.png" alt="Thumbnail 1" class="thumbnail"
+                            data-index="0">
+                        <img src="assets/carousel_3_1778757034986.png" alt="Thumbnail 3" class="thumbnail"
+                            data-index="2">
+                        <img src="assets/91928c6beda9d501d1c26ae0cac9daf21cf34169.jpg" alt="Thumbnail 1"
+                            class="thumbnail active" data-index="0">
+                        <img src="assets/b2bbeacab99354ed8115ebeb93ea4f25afce46fb.jpg" alt="Thumbnail 2"
+                            class="thumbnail" data-index="1">
                         <!-- Placeholders for extra thumbnails to match design -->
                         <div class="thumbnail placeholder-thumb"></div>
                         <div class="thumbnail placeholder-thumb"></div>
-                        <div class="thumbnail placeholder-thumb"></div>
                     </div>
+
+                    <!-- Side-by-side Zoom Preview Window -->
+                    <div id="zoom-preview-window" class="zoom-preview-window"></div>
                 </div>
 
                 <!-- Product Details Column -->
                 <div class="hero-details">
                     <div class="badges">
-                        <span class="badge"><i class="fa-solid fa-certificate"></i> BIS Certified</span>
-                        <span class="badge"><i class="fa-solid fa-stamp"></i> ISO Certified</span>
-                        <span class="badge"><i class="fa-solid fa-check-circle"></i> CE Certified</span>
+                        <span class="badge"><img src="assets/icons/BIS image.png" alt="BIS" style="height: 16px;"> BIS
+                            Certified</span>
+                        <span class="badge"><img src="assets/icons/ISI - image.png" alt="ISI" style="height: 16px;"> ISI
+                            Certified</span>
+                        <span class="badge"><img src="assets/icons/CE-image.png" alt="CE" style="height: 16px;"> CE
+                            Certified</span>
                     </div>
 
                     <h1 class="product-title">Premium HDPE Pipes & Coils for Modern Infrastructure</h1>
-                    
+
                     <ul class="product-features">
                         <li><i class="fa-solid fa-circle-check"></i> Leak-Proof Fusion Joints</li>
                         <li><i class="fa-solid fa-circle-check"></i> Chemical Resistance</li>
@@ -110,22 +131,19 @@
                     </div>
 
                     <div class="action-buttons">
-                        <button class="btn btn-primary btn-large">Get Custom Quote</button>
-                        <button class="btn btn-outline btn-large">View Technical Specs <i class="fa-solid fa-chevron-right"></i></button>
+                        <button class="btn btn-primary btn-large" id="btn-get-quote-hero">Get Custom Quote</button>
+                        <button class="btn btn-outline btn-large">View Technical Specs <i
+                                class="fa-solid fa-chevron-right"></i></button>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Trusted Logos -->
             <div class="container trusted-logos-container">
                 <p class="trusted-text">Trusted by Hundreds of Companies Globally</p>
                 <div class="logos-grid">
-                    <img src="https://placehold.co/120x40/transparent/333?text=EUROFLEX" alt="Euroflex Logo" class="trusted-logo">
-                    <img src="https://placehold.co/120x40/transparent/333?text=EUROFLEX" alt="Euroflex Logo" class="trusted-logo">
-                    <img src="https://placehold.co/120x40/transparent/333?text=EUROFLEX" alt="Euroflex Logo" class="trusted-logo">
-                    <img src="https://placehold.co/120x40/transparent/333?text=EUROFLEX" alt="Euroflex Logo" class="trusted-logo">
-                    <img src="https://placehold.co/120x40/transparent/333?text=EUROFLEX" alt="Euroflex Logo" class="trusted-logo">
-                    <img src="https://placehold.co/120x40/transparent/333?text=EUROFLEX" alt="Euroflex Logo" class="trusted-logo">
+                    <img src="assets/icons/companies-image.png" alt="Trusted Companies" class="trusted-logo"
+                        style="max-width: 100%; height: auto;">
                 </div>
             </div>
         </section>
@@ -135,9 +153,10 @@
             <div class="container">
                 <div class="section-header dark-mode">
                     <h2 class="section-title">Technical Specifications at a Glance</h2>
-                    <p class="section-subtitle">Comprehensive performance data demonstrating our commitment to quality and engineering excellence.</p>
+                    <p class="section-subtitle">Comprehensive performance data demonstrating our commitment to quality
+                        and engineering excellence.</p>
                 </div>
-                
+
                 <div class="table-responsive">
                     <table class="specs-table">
                         <thead>
@@ -185,14 +204,18 @@
                             </tr>
                             <tr>
                                 <td>Country of Origin</td>
-                                <td><img src="https://placehold.co/20x15/green/white?text=IN" alt="India Flag" style="display:inline; vertical-align:middle; margin-right:8px; border-radius:2px;"> India</td>
+                                <td><img src="https://placehold.co/20x15/green/white?text=IN" alt="India Flag"
+                                        style="display:inline; vertical-align:middle; margin-right:8px; border-radius:2px;">
+                                    India</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
                 <div class="text-center mt-32">
-                    <button class="btn btn-outline btn-light"><i class="fa-solid fa-download"></i> Download Full Technical Datasheet</button>
+                    <button class="btn btn-outline btn-light" id="btn-download-datasheet"><img
+                            src="assets/icons/DownloadSimple.png" alt="Download" style="height: 16px;"> Download Full
+                        Technical Datasheet</button>
                 </div>
             </div>
         </section>
@@ -202,61 +225,74 @@
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Built to Last. Engineered to Perform.</h2>
-                    <p class="section-subtitle">From bulk bags to technical threads, Mangalam delivers precision solutions for every stage of your piping process.</p>
+                    <p class="section-subtitle">From bulk bags to technical threads, Mangalam delivers precision
+                        solutions for every stage of your piping process.</p>
                 </div>
 
                 <div class="features-grid">
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i class="fa-solid fa-flask"></i>
+                            <img src="assets/icons/Bag.png" alt="Gear" style="height: 24px;">
                         </div>
                         <h3 class="feature-title">Superior Chemical Resistance</h3>
-                        <p class="feature-desc">HDPE pipes resist a wide range of chemicals, acids, and alkalis. Unlike metal pipes, they won't corrode, rust, or scale, ensuring pure water quality and extended service life in aggressive environments.</p>
+                        <p class="feature-desc">HDPE pipes resist a wide range of chemicals, acids, and alkalis. Unlike
+                            metal pipes, they won't corrode, rust, or scale, ensuring pure water quality and extended
+                            service life in aggressive environments.</p>
                     </div>
 
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i class="fa-solid fa-dumbbell"></i>
+                            <img src="assets/icons/Needle.png" alt="Needle" style="height: 24px;">
                         </div>
                         <h3 class="feature-title">Exceptional Flexibility & Durability</h3>
-                        <p class="feature-desc">HDPE pipes resist a wide range of chemicals, acids, and alkalis. Unlike metal pipes, they won't corrode, rust, or scale, ensuring pure water quality and extended service life in aggressive environments.</p>
+                        <p class="feature-desc">HDPE pipes resist a wide range of chemicals, acids, and alkalis. Unlike
+                            metal pipes, they won't corrode, rust, or scale, ensuring pure water quality and extended
+                            service life in aggressive environments.</p>
                     </div>
 
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i class="fa-solid fa-droplet-slash"></i>
+                            <img src="assets/icons/Package.png" alt="Package" style="height: 24px;">
                         </div>
                         <h3 class="feature-title">Leak-Proof Fusion Welding</h3>
-                        <p class="feature-desc">HDPE pipes resist a wide range of chemicals, acids, and alkalis. Unlike metal pipes, they won't corrode, rust, or scale, ensuring pure water quality and extended service life in aggressive environments.</p>
+                        <p class="feature-desc">HDPE pipes resist a wide range of chemicals, acids, and alkalis. Unlike
+                            metal pipes, they won't corrode, rust, or scale, ensuring pure water quality and extended
+                            service life in aggressive environments.</p>
                     </div>
 
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i class="fa-solid fa-sack-dollar"></i>
+                            <img src="assets/icons/GearFine.png" alt="Gear" style="height: 24px;">
                         </div>
                         <h3 class="feature-title">Cost-Effective Long-Term Solution</h3>
-                        <p class="feature-desc">HDPE pipes resist a wide range of chemicals, acids, and alkalis. Unlike metal pipes, they won't corrode, rust, or scale, ensuring pure water quality and extended service life in aggressive environments.</p>
+                        <p class="feature-desc">HDPE pipes resist a wide range of chemicals, acids, and alkalis. Unlike
+                            metal pipes, they won't corrode, rust, or scale, ensuring pure water quality and extended
+                            service life in aggressive environments.</p>
                     </div>
 
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i class="fa-solid fa-leaf"></i>
+                            <img src="assets/icons/GearFine.png" alt="Needle" style="height: 24px;">
                         </div>
                         <h3 class="feature-title">Environmentally Sustainable</h3>
-                        <p class="feature-desc">HDPE pipes resist a wide range of chemicals, acids, and alkalis. Unlike metal pipes, they won't corrode, rust, or scale, ensuring pure water quality and extended service life in aggressive environments.</p>
+                        <p class="feature-desc">HDPE pipes resist a wide range of chemicals, acids, and alkalis. Unlike
+                            metal pipes, they won't corrode, rust, or scale, ensuring pure water quality and extended
+                            service life in aggressive environments.</p>
                     </div>
 
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i class="fa-solid fa-certificate"></i>
+                            <img src="assets/icons/GearFine.png" alt="Package" style="height: 24px;">
                         </div>
                         <h3 class="feature-title">Certified Quality Assurance</h3>
-                        <p class="feature-desc">HDPE pipes resist a wide range of chemicals, acids, and alkalis. Unlike metal pipes, they won't corrode, rust, or scale, ensuring pure water quality and extended service life in aggressive environments.</p>
+                        <p class="feature-desc">HDPE pipes resist a wide range of chemicals, acids, and alkalis. Unlike
+                            metal pipes, they won't corrode, rust, or scale, ensuring pure water quality and extended
+                            service life in aggressive environments.</p>
                     </div>
                 </div>
 
                 <div class="text-center mt-32">
-                    <button class="btn btn-primary">Request a Quote</button>
+                    <button class="btn btn-primary" id="btn-request-quote-features">Request a Quote</button>
                 </div>
             </div>
         </section>
@@ -276,7 +312,8 @@
                             <i class="fa-solid fa-chevron-up toggle-icon"></i>
                         </button>
                         <div class="faq-answer" style="display: block;">
-                            <p>It is designed to cut various types of sheet metal with precision, allowing for intricate designs and shapes that are essential in manufacturing processes.</p>
+                            <p>It is designed to cut various types of sheet metal with precision, allowing for intricate
+                                designs and shapes that are essential in manufacturing processes.</p>
                         </div>
                     </div>
 
@@ -287,7 +324,9 @@
                             <i class="fa-solid fa-chevron-down toggle-icon"></i>
                         </button>
                         <div class="faq-answer">
-                            <p>Aluminum tubing offers excellent strength-to-weight ratio, corrosion resistance, and is easily machinable, making it ideal for various structural and fluid transfer applications.</p>
+                            <p>Aluminum tubing offers excellent strength-to-weight ratio, corrosion resistance, and is
+                                easily machinable, making it ideal for various structural and fluid transfer
+                                applications.</p>
                         </div>
                     </div>
 
@@ -298,7 +337,8 @@
                             <i class="fa-solid fa-chevron-down toggle-icon"></i>
                         </button>
                         <div class="faq-answer">
-                            <p>It is typically produced through an extrusion process where heated aluminum is forced through a die to create the desired shape and size.</p>
+                            <p>It is typically produced through an extrusion process where heated aluminum is forced
+                                through a die to create the desired shape and size.</p>
                         </div>
                     </div>
 
@@ -309,7 +349,8 @@
                             <i class="fa-solid fa-chevron-down toggle-icon"></i>
                         </button>
                         <div class="faq-answer">
-                            <p>Common applications include aerospace components, automotive parts, heat exchangers, and structural frameworks in construction.</p>
+                            <p>Common applications include aerospace components, automotive parts, heat exchangers, and
+                                structural frameworks in construction.</p>
                         </div>
                     </div>
 
@@ -320,7 +361,8 @@
                             <i class="fa-solid fa-chevron-down toggle-icon"></i>
                         </button>
                         <div class="faq-answer">
-                            <p>Yes, aluminum tubing can be customized in terms of length, diameter, wall thickness, and alloy type to meet specific application requirements.</p>
+                            <p>Yes, aluminum tubing can be customized in terms of length, diameter, wall thickness, and
+                                alloy type to meet specific application requirements.</p>
                         </div>
                     </div>
                 </div>
@@ -345,11 +387,15 @@
                 <div class="apps-header">
                     <div class="apps-title-area">
                         <h2 class="section-title">Versatile Applications Across Industries</h2>
-                        <p class="section-subtitle">From technical textiles to packaging materials, our precision-engineered machinery delivers superior performance across diverse applications.</p>
+                        <p class="section-subtitle">From technical textiles to packaging materials, our
+                            precision-engineered machinery delivers superior performance across diverse applications.
+                        </p>
                     </div>
                     <div class="apps-nav">
-                        <button class="app-nav-btn prev-app"><i class="fa-solid fa-arrow-left"></i></button>
-                        <button class="app-nav-btn next-app"><i class="fa-solid fa-arrow-right"></i></button>
+                        <button class="app-nav-btn prev-app"><img src="assets/icons/CaretRight.png" alt="Prev"
+                                style="transform: rotate(180deg); height: 16px;"></button>
+                        <button class="app-nav-btn next-app"><img src="assets/icons/CaretRight.png" alt="Next"
+                                style="height: 16px;"></button>
                     </div>
                 </div>
 
@@ -360,7 +406,8 @@
                             <img src="assets/app_1_1778757324702.png" alt="Fishnet Manufacturing" class="app-card-bg">
                             <div class="app-card-overlay">
                                 <h3>Fishnet Manufacturing</h3>
-                                <p>High-performance twisting solutions for packaging yarn, strapping materials, and reinforcement threads used in modern packaging applications.</p>
+                                <p>High-performance twisting solutions for packaging yarn, strapping materials, and
+                                    reinforcement threads used in modern packaging applications.</p>
                             </div>
                         </div>
 
@@ -369,7 +416,8 @@
                             <img src="assets/app_2_1778757340576.png" alt="Technical Textiles" class="app-card-bg">
                             <div class="app-card-overlay">
                                 <h3>Technical Textiles</h3>
-                                <p>High-performance twisting solutions for packaging yarn, strapping materials, and reinforcement threads used in modern packaging applications.</p>
+                                <p>High-performance twisting solutions for packaging yarn, strapping materials, and
+                                    reinforcement threads used in modern packaging applications.</p>
                             </div>
                         </div>
 
@@ -378,16 +426,19 @@
                             <img src="assets/app_3_1778757357064.png" alt="Packaging Materials" class="app-card-bg">
                             <div class="app-card-overlay">
                                 <h3>Packaging Materials</h3>
-                                <p>High-performance twisting solutions for packaging yarn, strapping materials, and reinforcement threads used in modern packaging applications.</p>
+                                <p>High-performance twisting solutions for packaging yarn, strapping materials, and
+                                    reinforcement threads used in modern packaging applications.</p>
                             </div>
                         </div>
 
                         <!-- Card 4 (Duplicate for carousel effect) -->
                         <div class="app-card">
-                            <img src="assets/app_1_1778757324702.png" alt="Industrial Reinforcement" class="app-card-bg">
+                            <img src="assets/app_1_1778757324702.png" alt="Industrial Reinforcement"
+                                class="app-card-bg">
                             <div class="app-card-overlay">
                                 <h3>Industrial Reinforcement</h3>
-                                <p>High-performance twisting solutions for packaging yarn, strapping materials, and reinforcement threads used in modern packaging applications.</p>
+                                <p>High-performance twisting solutions for packaging yarn, strapping materials, and
+                                    reinforcement threads used in modern packaging applications.</p>
                             </div>
                         </div>
                     </div>
@@ -400,7 +451,8 @@
             <div class="container">
                 <div class="section-header text-center mx-auto">
                     <h2 class="section-title">Advanced HDPE Pipe Manufacturing Process</h2>
-                    <p class="section-subtitle">Our state-of-the-art extrusion technology ensures consistent quality, optimal material properties, and dimensional accuracy in every pipe we manufacture.</p>
+                    <p class="section-subtitle">Our state-of-the-art extrusion technology ensures consistent quality,
+                        optimal material properties, and dimensional accuracy in every pipe we manufacture.</p>
                 </div>
 
                 <div class="process-container">
@@ -422,16 +474,21 @@
                         <div class="process-tab-content active" id="tab-raw-material">
                             <div class="process-details">
                                 <h3>High-Grade Raw Material Selection</h3>
-                                <p>Vacuum sizing tanks ensure precise outer diameter while internal pressure maintains perfect roundness and wall thickness uniformity.</p>
+                                <p>Vacuum sizing tanks ensure precise outer diameter while internal pressure maintains
+                                    perfect roundness and wall thickness uniformity.</p>
                                 <ul class="process-features">
                                     <li><i class="fa-solid fa-circle text-blue"></i> PE100 grade material</li>
-                                    <li><i class="fa-solid fa-circle text-blue"></i> Optimal molecular weight distribution</li>
+                                    <li><i class="fa-solid fa-circle text-blue"></i> Optimal molecular weight
+                                        distribution</li>
                                 </ul>
                             </div>
                             <div class="process-image-container">
-                                <button class="carousel-nav prev-btn process-nav"><i class="fa-solid fa-arrow-left"></i></button>
-                                <img src="assets/process_img_1778757471906.png" alt="Raw Material" class="process-img">
-                                <button class="carousel-nav next-btn process-nav"><i class="fa-solid fa-arrow-right"></i></button>
+                                <button class="carousel-nav prev-btn process-nav"><img src="assets/icons/CaretRight.png"
+                                        alt="Prev" style="transform: rotate(180deg); height: 16px;"></button>
+                                <img src="assets/smart-indian-engineer-man-wearing-safety-helmet-doing-stock-tick-check-cardboard-stock-product-management-factory-warehouse-background 1.png"
+                                    alt="Raw Material" class="process-img">
+                                <button class="carousel-nav next-btn process-nav"><img src="assets/icons/CaretRight.png"
+                                        alt="Next" style="height: 16px;"></button>
                             </div>
                         </div>
 
@@ -439,7 +496,8 @@
                         <div class="process-tab-content" id="tab-extrusion">
                             <div class="process-details">
                                 <h3>Precision Extrusion Process</h3>
-                                <p>Our advanced extruders melt the PE100 grade raw material uniformly to create a homogenous melt for pipe forming.</p>
+                                <p>Our advanced extruders melt the PE100 grade raw material uniformly to create a
+                                    homogenous melt for pipe forming.</p>
                                 <ul class="process-features">
                                     <li><i class="fa-solid fa-circle text-blue"></i> Controlled temperature zones</li>
                                     <li><i class="fa-solid fa-circle text-blue"></i> Uniform melt flow</li>
@@ -459,15 +517,18 @@
             <div class="container">
                 <div class="section-header text-center mx-auto">
                     <h2 class="section-title">Trusted Performance. Proven Results</h2>
-                    <p class="section-subtitle">From innovative Two-For-One Twisters to specialized heat setting machines, we deliver complete solutions for modern textile manufacturing.</p>
+                    <p class="section-subtitle">From innovative Two-For-One Twisters to specialized heat setting
+                        machines, we deliver complete solutions for modern textile manufacturing.</p>
                 </div>
 
                 <div class="testimonials-grid">
                     <!-- Testimonial 1 -->
                     <div class="testimonial-card">
-                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <div class="quote-icon"><img src="assets/icons/“.png" alt="Quote" style="height: 24px;"></div>
                         <h3 class="testimonial-heading">Excellent support for specialized applications.</h3>
-                        <p class="testimonial-text">The durability and performance of Mangalam's processing equipment has significantly improved our marine product quality. Excellent support for specialized applications.</p>
+                        <p class="testimonial-text">The durability and performance of Mangalam's processing equipment
+                            has significantly improved our marine product quality. Excellent support for specialized
+                            applications.</p>
                         <div class="testimonial-author">
                             <div class="author-avatar"><i class="fa-solid fa-user"></i></div>
                             <div class="author-info">
@@ -479,9 +540,11 @@
 
                     <!-- Testimonial 2 -->
                     <div class="testimonial-card">
-                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <div class="quote-icon"><img src="assets/icons/“.png" alt="Quote" style="height: 24px;"></div>
                         <h3 class="testimonial-heading">Excellent support for specialized applications.</h3>
-                        <p class="testimonial-text">The durability and performance of Mangalam's processing equipment has significantly improved our marine product quality. Excellent support for specialized applications.</p>
+                        <p class="testimonial-text">The durability and performance of Mangalam's processing equipment
+                            has significantly improved our marine product quality. Excellent support for specialized
+                            applications.</p>
                         <div class="testimonial-author">
                             <div class="author-avatar"><i class="fa-solid fa-user"></i></div>
                             <div class="author-info">
@@ -493,9 +556,11 @@
 
                     <!-- Testimonial 3 -->
                     <div class="testimonial-card">
-                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <div class="quote-icon"><img src="assets/icons/“.png" alt="Quote" style="height: 24px;"></div>
                         <h3 class="testimonial-heading">Provides the exact specifications we need!</h3>
-                        <p class="testimonial-text">For our technical textile applications, Mangalam's specialized machinery provides the exact specifications we need. Their understanding of automotive textile requirements is exceptional.</p>
+                        <p class="testimonial-text">For our technical textile applications, Mangalam's specialized
+                            machinery provides the exact specifications we need. Their understanding of automotive
+                            textile requirements is exceptional.</p>
                         <div class="testimonial-author">
                             <div class="author-avatar"><i class="fa-solid fa-user"></i></div>
                             <div class="author-info">
@@ -513,7 +578,8 @@
             <div class="container">
                 <div class="section-header text-center mx-auto">
                     <h2 class="section-title">Complete Piping Solutions Portfolio</h2>
-                    <p class="section-subtitle">From innovative Two-For-One Twisters to specialized heat setting machines, we deliver complete solutions for modern textile manufacturing.</p>
+                    <p class="section-subtitle">From innovative Two-For-One Twisters to specialized heat setting
+                        machines, we deliver complete solutions for modern textile manufacturing.</p>
                 </div>
 
                 <!-- Portfolio Grid -->
@@ -522,11 +588,13 @@
                     <div class="portfolio-card">
                         <div class="portfolio-content">
                             <h3>HDPE Fittings & Accessories</h3>
-                            <p>Complete range of electrofusion and butt fusion fittings, including elbows, tees, reducers, and couplers for seamless pipe connections.</p>
+                            <p>Complete range of electrofusion and butt fusion fittings, including elbows, tees,
+                                reducers, and couplers for seamless pipe connections.</p>
                         </div>
-                        <img src="assets/portfolio_img_1778757890311.png" alt="HDPE Fittings" class="portfolio-img">
+                        <img src="assets/smart-indian-engineer-man-wearing-safety-helmet-doing-stock-tick-check-cardboard-stock-product-management-factory-warehouse-background 1.png"
+                            alt="HDPE Fittings" class="portfolio-img">
                         <div class="portfolio-action">
-                            <button class="btn btn-outline" style="width: 100%;">Learn More</button>
+                            <button class="btn btn-portfolio">Learn More</button>
                         </div>
                     </div>
 
@@ -534,11 +602,13 @@
                     <div class="portfolio-card">
                         <div class="portfolio-content">
                             <h3>Professional Installation Services</h3>
-                            <p>Expert installation and fusion welding services ensuring optimal system performance, compliance with standards, and long-term reliability.</p>
+                            <p>Expert installation and fusion welding services ensuring optimal system performance,
+                                compliance with standards, and long-term reliability.</p>
                         </div>
-                        <img src="assets/portfolio_img_1778757890311.png" alt="Installation Services" class="portfolio-img">
+                        <img src="assets/portfolio_img_1778757890311.png" alt="Installation Services"
+                            class="portfolio-img">
                         <div class="portfolio-action">
-                            <button class="btn btn-outline" style="width: 100%;">Learn More</button>
+                            <button class="btn btn-portfolio">Learn More</button>
                         </div>
                     </div>
 
@@ -546,11 +616,13 @@
                     <div class="portfolio-card">
                         <div class="portfolio-content">
                             <h3>PE-RT Heating Pipes</h3>
-                            <p>Polyethylene of Raised Temperature resistance pipes ideal for underfloor heating, radiator connections, and hot water applications.</p>
+                            <p>Polyethylene of Raised Temperature resistance pipes ideal for underfloor heating,
+                                radiator connections, and hot water applications.</p>
                         </div>
-                        <img src="assets/portfolio_img_1778757890311.png" alt="PE-RT Heating Pipes" class="portfolio-img">
+                        <img src="assets/smart-indian-engineer-man-wearing-safety-helmet-doing-stock-tick-check-cardboard-stock-product-management-factory-warehouse-background 1.png"
+                            alt="PE-RT Heating Pipes" class="portfolio-img">
                         <div class="portfolio-action">
-                            <button class="btn btn-outline" style="width: 100%;">Learn More</button>
+                            <button class="btn btn-portfolio">Learn More</button>
                         </div>
                     </div>
                 </div>
@@ -561,28 +633,33 @@
                         <h3>Didn't find what <span class="text-blue">you're looking for?</span></h3>
                         <p>Talk to our experts for custom solutions and tailored guidance.</p>
                     </div>
-                    <button class="btn btn-primary"><i class="fa-solid fa-comments"></i> Talk to an Expert</button>
+                    <button class="btn btn-expert"><img src="assets/icons/PhoneCall.png" alt="Phone"
+                            style="height: 18px;"> Talk to an Expert</button>
                 </div>
 
                 <!-- Resources Section -->
                 <div class="resources-section">
                     <div class="section-header text-center mx-auto" style="margin-top: 80px;">
                         <h2 class="section-title">Resources & Downloads</h2>
-                        <p class="section-subtitle">Get all the technical documentation and resources you need to make informed decisions about our HDPE piping solutions.</p>
+                        <p class="section-subtitle">Get all the technical documentation and resources you need to make
+                            informed decisions about our HDPE piping solutions.</p>
                     </div>
-                    
+
                     <ul class="resources-list">
                         <li class="resource-item">
                             <span>HDPE Pipe Installation Manual (PDF)</span>
-                            <a href="#" class="download-link">Download PDF <i class="fa-solid fa-download"></i></a>
+                            <a href="#" class="download-link">Download PDF <img src="assets/icons/Download.png"
+                                    alt="Download"></a>
                         </li>
                         <li class="resource-item">
                             <span>Maintenance & Inspection Handbook (PDF)</span>
-                            <a href="#" class="download-link">Download PDF <i class="fa-solid fa-download"></i></a>
+                            <a href="#" class="download-link">Download PDF <img src="assets/icons/Download.png"
+                                    alt="Download"></a>
                         </li>
                         <li class="resource-item">
                             <span>Engineering Specifications Sheet (PDF)</span>
-                            <a href="#" class="download-link">Download PDF <i class="fa-solid fa-download"></i></a>
+                            <a href="#" class="download-link">Download PDF <img src="assets/icons/Download.png"
+                                    alt="Download"></a>
                         </li>
                     </ul>
                 </div>
@@ -595,13 +672,20 @@
                 <div class="cta-container">
                     <div class="cta-content">
                         <h2>Ready to Transform Your Textile Manufacturing?</h2>
-                        <p>Get a personalized consultation and quote for machinery solutions tailored to your specific production requirements.</p>
+                        <p>Get a personalized consultation and quote for machinery solutions tailored to your specific
+                            production requirements.</p>
+
+                        <div class="cta-divider"></div>
+
                         <div class="contact-info">
-                            <p>For immediate assistance, feel free to give us a direct call at <strong>+91-XXX-XXX-XXXX</strong>. You can also send us a quick email at <strong>info@mangalam.com</strong></p>
+                            <p>For immediate assistance, feel free to give us a direct call at
+                                <strong>+91-XXX-XXX-XXXX</strong>. You can also send us a quick email at
+                                <strong>info@meera-ind.com</strong>
+                            </p>
                         </div>
                     </div>
-                    
-                    <div class="cta-form-container">
+
+                    <div class="cta-form-card">
                         <div class="cta-form-header">
                             <h3>Contact Us Today</h3>
                         </div>
@@ -610,14 +694,15 @@
                             <input type="text" placeholder="Company Name" required class="form-input">
                             <input type="email" placeholder="Email Address" required class="form-input">
                             <div class="phone-input-group">
-                                <select class="form-select">
-                                    <option value="+91">+91</option>
-                                    <option value="+1">+1</option>
-                                    <option value="+44">+44</option>
-                                </select>
+                                <div class="country-code-select">
+                                    <span>+91</span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
                                 <input type="tel" placeholder="7003026616" required class="form-input">
                             </div>
-                            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">Request Custom Quote</button>
+                            <button type="submit" class="btn btn-dark"
+                                style="width: 100%; margin-top: 8px; background-color: #262A2E;">Request
+                                Custom Quote</button>
                         </form>
                     </div>
                 </div>
@@ -632,11 +717,12 @@
             <div class="footer-top">
                 <div class="footer-brand">
                     <div class="logo">
-                        <span style="font-weight: 800; font-size: 1.5rem; color: var(--navy-dark);"><span style="color: var(--accent-red);">MANGALAM</span> PIPES</span>
+                        <img src="assets/icons/gushwork assignment - logo.png" alt="Mangalam Pipes Logo"
+                            style="height: 40px; width: 109px;">
                     </div>
                 </div>
                 <div class="footer-slogan">
-                    <p>Premium <strong>HDPE Pipes & Fittings Manufacturer</strong> in South India</p>
+                    <p>Premium <strong>HDPE Pipes & Fittings <br />Manufacturer</strong> in South India</p>
                 </div>
             </div>
 
@@ -672,15 +758,20 @@
                 <div class="footer-col">
                     <h4>Contact</h4>
                     <ul class="contact-details">
-                        <li><i class="fa-solid fa-location-dot"></i> 2126, Road No. 2, GIDC Sachin, Surat - 394 230 Gujarat, India</li>
-                        <li><i class="fa-solid fa-phone"></i> +91-XXX-XXX-XXXX</li>
-                        <li><i class="fa-solid fa-envelope"></i> info@mangalam.com</li>
-                        <li><i class="fa-solid fa-headset"></i> support@mangalam.com</li>
+                        <li><img src="assets/icons/MapPinLine.png" alt="Location"
+                                style="height: 16px; margin-top: 4px;"> 2126, Road No. 2, GIDC Sachin, Surat - 394 230
+                            Gujarat, India</li>
+                        <li><img src="assets/icons/Phone.png" alt="Phone" style="height: 16px; margin-top: 4px;">
+                            +91-XXX-XXX-XXXX</li>
+                        <li><img src="assets/icons/EnvelopeSimple.png" alt="Email"
+                                style="height: 16px; margin-top: 4px;"> info@mangalam.com</li>
+                        <li><img src="assets/icons/Headset.png" alt="Support" style="height: 16px; margin-top: 4px;">
+                            support@mangalam.com</li>
                     </ul>
                     <div class="social-links">
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <img src="assets/icons/linkedIn - button.png" alt="LinkedIn" />
+                        <img src="assets/icons/X - button.png" alt="X" />
+                        <img src="assets/icons/insta - button.png" alt="Instagram" />
                     </div>
                 </div>
             </div>
@@ -698,6 +789,78 @@
         </div>
     </footer>
 
+    <!-- Modal for Technical Datasheet -->
+    <div id="modal-datasheet" class="modal-overlay">
+        <div class="modal-container">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h3>Download Technical Datasheet</h3>
+                <p>Please provide your details to receive the full specifications.</p>
+            </div>
+            <div class="modal-body">
+                <form class="modal-form"
+                    onsubmit="event.preventDefault(); this.closest('.modal-overlay').classList.remove('active'); alert('Datasheet link sent to your email!');">
+                    <div class="form-group">
+                        <label for="ds-name">Full Name</label>
+                        <input type="text" id="ds-name" placeholder="Enter your name" required class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="ds-email">Email Address</label>
+                        <input type="email" id="ds-email" placeholder="Enter your email" required class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="ds-company">Company Name</label>
+                        <input type="text" id="ds-company" placeholder="Enter company name" required class="form-input">
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 16px;">Get
+                        Datasheet</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Quote Request -->
+    <div id="modal-quote" class="modal-overlay">
+        <div class="modal-container">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h3>Request a Custom Quote</h3>
+                <p>Our experts will get back to you with a tailored proposal.</p>
+            </div>
+            <div class="modal-body">
+                <form class="modal-form"
+                    onsubmit="event.preventDefault(); this.closest('.modal-overlay').classList.remove('active'); alert('Quote request received! We will contact you soon.');">
+                    <div class="form-group">
+                        <label for="q-name">Full Name</label>
+                        <input type="text" id="q-name" placeholder="Enter your name" required class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="q-email">Email Address</label>
+                        <input type="email" id="q-email" placeholder="Enter your email" required class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="q-phone">Phone Number</label>
+                        <div class="phone-input-group">
+                            <select class="form-select" style="width: 80px;">
+                                <option value="+91">+91</option>
+                                <option value="+1">+1</option>
+                            </select>
+                            <input type="tel" id="q-phone" placeholder="Phone number" required class="form-input">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="q-message">Specific Requirements</label>
+                        <textarea id="q-message" placeholder="Tell us about your project" class="form-input"
+                            style="min-height: 100px; resize: vertical;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 16px;">Submit
+                        Request</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
+
 </html>

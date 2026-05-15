@@ -7,9 +7,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > scrollTriggerThreshold) {
-            header.classList.add('is-sticky');
+            if (!header.classList.contains('is-sticky')) {
+                document.body.style.paddingTop = `${header.offsetHeight}px`;
+                header.classList.add('is-sticky');
+            }
         } else {
-            header.classList.remove('is-sticky');
+            if (header.classList.contains('is-sticky')) {
+                document.body.style.paddingTop = '0px';
+                header.classList.remove('is-sticky');
+            }
         }
     });
 
@@ -67,39 +73,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Zoom Preview on Hover ---
     
-    // Create the zoom lens (preview) element dynamically
-    const zoomLens = document.createElement('div');
-    zoomLens.style.position = 'absolute';
-    zoomLens.style.display = 'none';
-    zoomLens.style.pointerEvents = 'none'; // Don't block mouse events
-    zoomLens.style.borderRadius = '8px';
-    zoomLens.style.boxShadow = '0 10px 30px rgba(0,0,0,0.15)';
-    zoomLens.style.border = '2px solid white';
-    zoomLens.style.zIndex = '100';
-    zoomLens.style.width = '200px';
-    zoomLens.style.height = '200px';
-    // We will use background-image for the zoom effect
-    zoomLens.style.backgroundRepeat = 'no-repeat';
-    
-    zoomWrapper.appendChild(zoomLens);
+    const zoomPreviewWindow = document.getElementById('zoom-preview-window');
 
     zoomWrapper.addEventListener('mouseenter', () => {
         // Only enable zoom on larger screens
-        if(window.innerWidth > 768) {
-            zoomLens.style.display = 'block';
-            zoomLens.style.backgroundImage = `url(${mainImage.src})`;
+        if(window.innerWidth > 992) {
+            zoomPreviewWindow.style.display = 'block';
+            zoomPreviewWindow.style.backgroundImage = `url(${mainImage.src})`;
             // Zoom factor (e.g., 2.5x)
             const zoomFactor = 2.5; 
-            zoomLens.style.backgroundSize = `${mainImage.width * zoomFactor}px ${mainImage.height * zoomFactor}px`;
+            zoomPreviewWindow.style.backgroundSize = `${mainImage.width * zoomFactor}px ${mainImage.height * zoomFactor}px`;
         }
     });
 
     zoomWrapper.addEventListener('mouseleave', () => {
-        zoomLens.style.display = 'none';
+        zoomPreviewWindow.style.display = 'none';
     });
 
     zoomWrapper.addEventListener('mousemove', (e) => {
-        if(window.innerWidth <= 768) return;
+        if(window.innerWidth <= 992) return;
 
         const rect = zoomWrapper.getBoundingClientRect();
         
@@ -107,25 +99,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
         
-        // Move the lens
-        // Offset by half its width/height to center it on the cursor
-        const lensWidth = 200;
-        const lensHeight = 200;
-        
-        // Ensure lens doesn't go entirely off screen, though hiding overflow is also an option
-        // For a true "preview popup" design, it could sit fixed next to the image. 
-        // For a "magnifying glass" effect, it follows the cursor. Let's do magnifying glass.
-        
-        zoomLens.style.left = `${x - (lensWidth / 2)}px`;
-        zoomLens.style.top = `${y - (lensHeight / 2)}px`;
+        // Calculate percentage (0 to 1)
+        const xPercent = Math.max(0, Math.min(1, x / rect.width));
+        const yPercent = Math.max(0, Math.min(1, y / rect.height));
 
-        // Calculate background position
-        const zoomFactor = 2.5;
-        // The background position needs to be negative and proportional to the mouse position
-        const bgX = -(x * zoomFactor) + (lensWidth / 2);
-        const bgY = -(y * zoomFactor) + (lensHeight / 2);
-        
-        zoomLens.style.backgroundPosition = `${bgX}px ${bgY}px`;
+        // Update background position based on percentage
+        zoomPreviewWindow.style.backgroundPosition = `${xPercent * 100}% ${yPercent * 100}%`;
     });
 
     // --- 3. FAQ Accordion Logic ---
@@ -231,6 +210,57 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetContent = document.getElementById(targetId);
             if (targetContent) {
                 targetContent.classList.add('active');
+            }
+        });
+    });
+
+    // --- 6. Modal Popups Logic ---
+    const modalDatasheet = document.getElementById('modal-datasheet');
+    const modalQuote = document.getElementById('modal-quote');
+    
+    const btnDownloadDatasheet = document.getElementById('btn-download-datasheet');
+    const btnRequestQuoteFeatures = document.getElementById('btn-request-quote-features');
+    const btnGetQuoteHero = document.getElementById('btn-get-quote-hero');
+    
+    const modalCloseBtns = document.querySelectorAll('.modal-close');
+    const modalOverlays = document.querySelectorAll('.modal-overlay');
+
+    // Open Datasheet Modal
+    if (btnDownloadDatasheet) {
+        btnDownloadDatasheet.addEventListener('click', () => {
+            modalDatasheet.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        });
+    }
+
+    // Open Quote Modal
+    const openQuoteModal = () => {
+        modalQuote.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    };
+
+    if (btnRequestQuoteFeatures) {
+        btnRequestQuoteFeatures.addEventListener('click', openQuoteModal);
+    }
+    if (btnGetQuoteHero) {
+        btnGetQuoteHero.addEventListener('click', openQuoteModal);
+    }
+
+    // Close Modals
+    const closeModals = () => {
+        modalOverlays.forEach(modal => modal.classList.remove('active'));
+        document.body.style.overflow = 'auto';
+    };
+
+    modalCloseBtns.forEach(btn => {
+        btn.addEventListener('click', closeModals);
+    });
+
+    // Close when clicking outside the container
+    modalOverlays.forEach(overlay => {
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) {
+                closeModals();
             }
         });
     });
