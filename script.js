@@ -72,22 +72,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- Zoom Preview on Hover ---
-    
     const zoomPreviewWindow = document.getElementById('zoom-preview-window');
+    const zoomLens = document.getElementById('zoom-lens');
+    const zoomIcon = document.querySelector('.zoom-icon-overlay');
 
     zoomWrapper.addEventListener('mouseenter', () => {
-        // Only enable zoom on larger screens
         if(window.innerWidth > 992) {
             zoomPreviewWindow.style.display = 'block';
+            zoomLens.style.display = 'block';
+            if (zoomIcon) zoomIcon.style.opacity = '0';
+            
             zoomPreviewWindow.style.backgroundImage = `url(${mainImage.src})`;
-            // Zoom factor (e.g., 2.5x)
-            const zoomFactor = 2.5; 
+            // The zoom factor is determined by the ratio of the preview window to the lens
+            // Preview: 380px, Lens: 150px -> Factor: ~2.53
+            const zoomFactor = 380 / 150; 
             zoomPreviewWindow.style.backgroundSize = `${mainImage.width * zoomFactor}px ${mainImage.height * zoomFactor}px`;
         }
     });
 
     zoomWrapper.addEventListener('mouseleave', () => {
         zoomPreviewWindow.style.display = 'none';
+        zoomLens.style.display = 'none';
+        if (zoomIcon) zoomIcon.style.opacity = '0.8';
     });
 
     zoomWrapper.addEventListener('mousemove', (e) => {
@@ -96,14 +102,27 @@ document.addEventListener('DOMContentLoaded', () => {
         const rect = zoomWrapper.getBoundingClientRect();
         
         // Calculate mouse position relative to the image wrapper
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
+        let x = e.clientX - rect.left;
+        let y = e.clientY - rect.top;
         
-        // Calculate percentage (0 to 1)
-        const xPercent = Math.max(0, Math.min(1, x / rect.width));
-        const yPercent = Math.max(0, Math.min(1, y / rect.height));
+        // Center the lens on the mouse
+        let lensX = x - zoomLens.offsetWidth / 2;
+        let lensY = y - zoomLens.offsetHeight / 2;
+        
+        // Keep the lens within the image bounds
+        if (lensX < 0) lensX = 0;
+        if (lensX > rect.width - zoomLens.offsetWidth) lensX = rect.width - zoomLens.offsetWidth;
+        if (lensY < 0) lensY = 0;
+        if (lensY > rect.height - zoomLens.offsetHeight) lensY = rect.height - zoomLens.offsetHeight;
+        
+        zoomLens.style.left = `${lensX}px`;
+        zoomLens.style.top = `${lensY}px`;
 
-        // Update background position based on percentage
+        // Calculate position percentage based on lens position
+        const xPercent = lensX / (rect.width - zoomLens.offsetWidth);
+        const yPercent = lensY / (rect.height - zoomLens.offsetHeight);
+
+        // Update background position
         zoomPreviewWindow.style.backgroundPosition = `${xPercent * 100}% ${yPercent * 100}%`;
     });
 

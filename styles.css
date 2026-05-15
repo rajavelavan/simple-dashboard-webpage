@@ -259,7 +259,7 @@ img {
 
 /* --- Hero Section --- */
 .hero-section {
-    padding: var(--section-padding-y) 0;
+    padding: 0px;
 }
 
 .hero-container {
@@ -372,22 +372,52 @@ img {
 /* Zoom Preview Window */
 .zoom-preview-window {
     position: absolute;
-    top: 0;
+    top: 40px;
+    /* Shifted down slightly to overlap details nicely */
     left: calc(100% + 24px);
-    /* Show to the right of the carousel */
-    width: 100%;
-    /* Match width of the image container roughly */
-    max-width: 500px;
-    height: 100%;
+    width: 380px;
+    /* Specific width from design feel */
+    height: 380px;
+    /* Square shape */
     background-color: var(--bg-white);
     border: 1px solid var(--border-color);
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
     z-index: 1000;
     display: none;
     background-repeat: no-repeat;
     pointer-events: none;
-    /* So it doesn't block interactions */
+}
+
+.zoom-lens {
+    position: absolute;
+    border: 1px solid var(--border-color);
+    width: 150px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: crosshair;
+    display: none;
+    z-index: 4;
+}
+
+.zoom-icon-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid var(--border-color);
+    width: 44px;
+    height: 44px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--navy-dark);
+    pointer-events: none;
+    opacity: 0.8;
+    z-index: 5;
 }
 
 /* Hero Details */
@@ -421,7 +451,7 @@ img {
     font-size: 2.8rem;
     font-weight: 800;
     line-height: 1.2;
-    color: var(--navy-dark);
+    color: var(--dark);
     letter-spacing: -0.5px;
 }
 
@@ -462,7 +492,7 @@ img {
 .price-value {
     font-size: 2rem;
     font-weight: 800;
-    color: var(--navy-dark);
+    color: var(--dark);
     margin-top: 4px;
     margin-bottom: 16px;
 }
@@ -499,30 +529,32 @@ img {
 }
 
 .trusted-logos-container {
-    margin-top: 60px;
+    margin-top: 100px;
+    margin-bottom: 80px;
     text-align: center;
 }
 
 .trusted-text {
-    font-size: 0.85rem;
-    color: var(--text-light);
+    font-size: 1rem;
+    color: #475569;
     font-weight: 500;
-    margin-bottom: 24px;
+    margin-bottom: 40px;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
 }
 
 .logos-grid {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     gap: 40px;
-    opacity: 0.6;
-    filter: grayscale(100%);
-    transition: all var(--transition-normal);
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-.logos-grid:hover {
-    filter: grayscale(0%);
-    opacity: 1;
+.trusted-logo {
+    height: 100px;
+    width: 102px;
 }
 
 /* --- Generic Section Utilities --- */
