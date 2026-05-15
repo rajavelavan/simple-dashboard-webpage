@@ -612,9 +612,22 @@ img {
     border-color: var(--bg-white);
 }
 
+#btn-download-datasheet {
+    padding: 14px 32px;
+    font-size: 1rem;
+    margin-top: 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#btn-download-datasheet:hover {
+    border-color: var(--bg-white);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
 /* --- Tech Specs Section --- */
 .tech-specs-section {
-    background-color: var(--navy-dark);
+    background-color: #0F172A; /* Dark navy charcoal */
     padding: var(--section-padding-y) 0;
     color: var(--bg-white);
 }
@@ -634,19 +647,20 @@ img {
 
 .specs-table th {
     background-color: rgba(255, 255, 255, 0.05);
-    color: var(--text-light);
-    font-size: 0.85rem;
+    color: #94A3B8;
+    font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 16px 24px;
+    letter-spacing: 1px;
+    padding: 20px 32px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .specs-table td {
-    padding: 16px 24px;
+    padding: 18px 32px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     font-size: 0.95rem;
+    color: #F8FAFC;
 }
 
 .specs-table tbody tr:last-child td {
